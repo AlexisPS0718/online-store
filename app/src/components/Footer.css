@@ -1,0 +1,9 @@
+.footer {
+  background-color: lightgray;
+  padding: 1rem;
+}
+
+.footer h1 {
+  color: blue;
+  font-size: 2rem;
+}
