@@ -1,0 +1,33 @@
+.product {
+  background-color: #F5F5F5;
+  text-align: center;
+  display: inline-block;
+  /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.233); */
+  border: 1px solid rgba(0, 0, 0, 0.192);
+  border-radius: 5px;
+  padding: 1.8rem;
+  padding-top: 2rem;
+  height: 310px;
+  width: 240px;
+}
+
+.product img {
+  width: 45%;
+  height: 35%;
+}
+
+.product span {
+  color: red;
+}
+
+.product .add-cart {
+  background-color: #3F2305;
+  color: white;
+  border-radius: 5px;
+  padding: 0.8rem;
+  margin-top: 1rem;
+}
+
+.product .prices {
+  margin-bottom: 1rem;
+}

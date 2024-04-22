@@ -1,14 +1,15 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import QuantityPicker from './components/QuantityPicker';
+import Catalog from './pages/Catalog';
+import Header from './components/Header';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Navbar />
-      <h1>Welcome to my store!</h1>
-      <QuantityPicker />
+      <Header />
+      <Catalog />
       <Footer />
     </div>
   );

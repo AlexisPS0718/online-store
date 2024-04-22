@@ -1,3 +1,56 @@
+.navbar {
+  background-color: #F2EAD3;
+}
+
 .navbar h1 {
-  color: red;
+  display: inline-block;
+  font-size: 2.6rem;
+  font-weight: 300;
+}
+
+.navbar nav a {
+  color: black;
+  font-weight: 300;
+  font-size: 1.6rem;
+  margin-left: 2rem;
+}
+
+.navbar input {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 12rem;
+  border: 0;
+}
+
+.navbar button {
+  background-color: #3F2305;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+}
+
+.navbar .container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar .nav-link {
+  display: inline-block;
+  margin-left: 3rem;
+}
+
+.navbar .flex-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .flex-space-between a {
+  color: black;
 }

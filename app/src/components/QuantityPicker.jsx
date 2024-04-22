@@ -2,7 +2,7 @@ import './QuantityPicker.css'
 import { useState } from 'react'
 
 function QuantityPicker() {
-  const [quantity, setQuantity] = useState(10);
+  const [quantity, setQuantity] = useState(1);
 
   function increase() {
     if (quantity >= 99) {
@@ -22,9 +22,9 @@ function QuantityPicker() {
 
   return (
     <div className="qt-picker">
-      <button onClick={decrease}>-</button>
+      <button disabled={quantity === 1} onClick={decrease}>-</button>
       <label>{quantity}</label>
-      <button onClick={increase}>+</button>
+      <button disabled={quantity === 99} onClick={increase}>+</button>
     </div>
   );
 }

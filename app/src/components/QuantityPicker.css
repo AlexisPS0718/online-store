@@ -2,3 +2,12 @@
 .qt-picker label {
   margin-right: 0.3rem;
 }
+
+.qt-picker button {
+  background-color: #F5F5F5;
+  border: 1px solid rgba(0, 0, 0, 0.192);
+  border-radius: 5px;
+  padding: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
