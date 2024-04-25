@@ -1,0 +1,35 @@
+.shopping-list {
+  background-color: #F5F5F5;
+}
+
+.shopping-list h1,
+.shopping-list .form {
+  text-align: center;
+}
+
+.shopping-list button {
+  background-color: #3F2305;
+  color: white;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.shopping-list input {
+  padding: 0.5rem;
+  width: 15rem;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+}
+
+.shopping-list .number-items {
+  text-align: center;
+}
+
+.shopping-list .list {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2rem;
+}

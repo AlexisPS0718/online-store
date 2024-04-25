@@ -54,6 +54,10 @@ img {
   max-width: 100%;
 }
 
+input {
+  border: 1px solid rgba(0, 0, 0, 0.192);
+}
+
 button,
 input {
   font-family: "Titillium Web", sans-serif;
