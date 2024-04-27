@@ -7,6 +7,9 @@ Online store project made with React.
 ## Create a new React app
 `` npx create-react-app app ``
 
+## Install react-router-dom
+`` npx install -s react-router-dom ``
+
 ## How to start the application
 `` npm install ``
 `` npm start ``

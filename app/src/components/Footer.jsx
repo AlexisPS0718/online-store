@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer-container">
-        <a href="#top">
+        <a className="link-1" href="#top">
           <h2><b>ONLINE</b> STORE</h2>
         </a>
         <hr />
@@ -33,7 +33,7 @@ function Footer() {
           <div>
             <p className="main-text-2">Sign up for our newsletter:</p>
             <div className="flex-news">
-                <input className="input-small" type="email" name="" id="" />
+                <input className="input-small" type="email" placeholder='Email' />
                 <button className="btn-sm-white">Sign up</button>
             </div>
           </div>

@@ -11,8 +11,7 @@
 .navbar nav a {
   color: black;
   font-weight: 300;
-  font-size: 1.6rem;
-  margin-left: 2rem;
+  font-size: 1.2rem;
 }
 
 .navbar input {
@@ -48,8 +47,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
-.navbar .flex-space-between a {
-  color: black;
+.navbar .links {
+  display: flex;
+  align-items: center;
 }

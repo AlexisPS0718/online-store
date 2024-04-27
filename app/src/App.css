@@ -33,17 +33,6 @@ a {
   text-decoration: none;
 }
 
-ul {
-  padding-bottom: 1rem;
-  list-style: none;
-  list-style-image: none;
-}
-
-ul li {
-  position: relative;
-  left: -2.5rem;
-}
-
 hr {
   height: 1px;
   background-color: black;

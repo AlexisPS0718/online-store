@@ -24,7 +24,7 @@ function ShoppingList() {
 
   return (
     <div className="shopping-list">
-      <h1>Shopping List</h1>
+      <h2>Shopping List</h2>
       <div className="form">
         <label>Add an item: </label>
         <br />
@@ -35,9 +35,9 @@ function ShoppingList() {
         <p>Number of items: {quantity}</p>
       </div>
       <div className="list">
-        <ol>
+        <ul>
           {list.map(item => <li key={item}>{item}</li>)}
-        </ol>
+        </ul>
       </div>
     </div>
   );
