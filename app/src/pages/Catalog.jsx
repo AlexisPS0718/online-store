@@ -1,67 +1,59 @@
 import './Catalog.css'
 import Product from './../components/Product.jsx';
+import dataService from '../services/dataService.js';
+import { useEffect, useState } from 'react';
 
 function Catalog() {
-  const products = [
-    {
-      _id: 1,
-      title: "Laptop",
-      price: 499.99,
-      image: "Laptop.png",
-      category: "PC"
-    },
-    {
-      _id: 2,
-      title: "Mouse",
-      price: 79.99,
-      image: "Mouse.webp",
-      category: "Accessories"
-    },
-    {
-      _id: 3,
-      title: "Keyboard",
-      price: 119.99,
-      image: "Keyboard.webp",
-      category: "Accessories"
-    },
-    {
-      _id: 4,
-      title: "Headphones",
-      price: 129.99,
-      image: "Headphones.png",
-      category: "Sound"
-    },
-    {
-      _id: 5,
-      title: "Speakers",
-      price: 299.99,
-      image: "Speakers.webp",
-      category: "Sound"
-    },
-    {
-      _id: 6,
-      title: "Monitor",
-      price: 399.99,
-      image: "Monitor.webp",
-      category: "Display"
-    },
-    {
-      _id: 7,
-      title: "Mousepad",
-      price: 29.99,
-      image: "Mousepad.webp",
-      category: "Accessories"
-    }
-  ]
+  const [products, setProducts] = useState([]);
+  const [visibleProducts, setVisibleProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
+
+  useEffect(function () {
+    loadCatalog();
+    loadCategories();
+  }, []);
+
+  function loadCatalog() {
+    const prods = dataService.getProducts();
+    setProducts(prods);
+    setVisibleProducts(prods);
+  }
+
+  function loadCategories() {
+    const cats = dataService.getCategories();
+    setCategories(cats);
+  }
+
+  function filter(cat) {
+    let prods = products.filter(prod => prod.category === cat);
+    setVisibleProducts(prods);
+  }
+
+  function showAll() {
+    setVisibleProducts(products);
+  }
+
+  function searchByText(e) {
+    let text = e.target.value;
+    let prods = products.filter(prod => prod.title.toLowerCase().includes(text.toLowerCase()));
+    setVisibleProducts(prods);
+  }
 
   return (
     <div className="catalog">
       <div className="container">
         <h2>Our Catalog</h2>
+        <div className="categories">
+          {categories.map(cat => <button onClick={() => filter(cat)} key={cat}>{cat}</button>)}
+          <button onClick={showAll}>All</button>
+          <input onChange={searchByText} type="search" placeholder="Search" />
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
         <div className="products">
-          {products.map(prod => <Product key={prod._id} data={prod} />)}
+          {visibleProducts.map(prod => <Product key={prod._id} data={prod} />)}
         </div>
       </div>
+      
     </div>
   );
 }

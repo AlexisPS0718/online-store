@@ -1,0 +1,51 @@
+.contact {
+  display: flex;
+  background-color: #F5F5F5;
+  flex: 1;
+  flex-direction: column;
+  font-family: "Titillium Web", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.contact form {
+  background-color: #F5F5F5;
+  width: 30%;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.192);
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.contact fieldset {
+  background-color: #F5F5F5;
+  border: 1px solid rgba(0, 0, 0, 0.192);
+  font-weight: bold;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.contact label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.contact input,
+.contact textarea,
+.contact select {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.192);
+  border-radius: 5px;
+  width: 98%;
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+}

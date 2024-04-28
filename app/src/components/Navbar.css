@@ -21,10 +21,10 @@
   width: 12rem;
 }
 
-.navbar button {
-  background-color: #3F2305;
-  color: white;
-  font-size: 1rem;
+.navbar .link {
+  background-color: none;
+  color: #3F2305;
+  font-size: 1.5rem;
   padding: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;

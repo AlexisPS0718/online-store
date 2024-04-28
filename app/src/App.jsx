@@ -7,6 +7,8 @@ import Catalog from './pages/Catalog';
 import ShoppingList from './pages/ShoppingList';
 import About from './pages/About';
 import Admin from './pages/Admin';
+import Cart from './pages/Cart';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path='/catalog' element={<Catalog />} />
           <Route path='/list' element={<ShoppingList />} />
           <Route path='/admin' element={<Admin />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/contact' element={<Contact />} />
         </Routes>
         <Footer />
         </div>

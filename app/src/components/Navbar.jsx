@@ -14,10 +14,10 @@ function Navbar() {
             <Link className="nav-link" to="/catalog">Catalog</Link>
             <Link className="nav-link" to="/list">Shopping list</Link>
             <Link className="nav-link" to="/admin">Admin</Link>
+            <Link className="nav-link" to="/contact">Contact us</Link>
           </div>
           <div>
-            <input type="text" placeholder="Search" />
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <Link className="link" to="/cart"><i class="fa-solid fa-cart-shopping"></i></Link>
           </div>
         </nav>
       </div>

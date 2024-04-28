@@ -23,6 +23,31 @@
 .catalog .products {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  row-gap: 3rem;
+  row-gap: 2rem;
   justify-items: center;
+}
+
+.catalog .categories {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.catalog .categories button {
+  background-color: #3F2305;
+  color: white;
+  font-size: 0.8rem;
+  width: fit-content;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+}
+
+.catalog .categories input {
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  border-radius: 5px;
+  width: 12rem;
 }
