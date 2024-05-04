@@ -4,8 +4,18 @@ import { Link } from 'react-router-dom';
 import './Navbar.css'
 
 function Navbar() {
-  let user = useContext(DataContext).user;
-  let cart = useContext(DataContext).cart;
+  let {user, cart} = useContext(DataContext);
+  /* let cart = useContext(DataContext).cart; */
+
+  function getNumberOfProducts() {
+    let total = 0;
+
+    for (let i = 0; i < cart.length; i++) {
+      total += cart[i].quantity;
+    }
+
+    return total;
+  }
 
   return (
     <div className="navbar">
@@ -24,7 +34,7 @@ function Navbar() {
           <div className="user-cart">
             <button>{user.name}</button>
             <Link className="link" to="/cart"><i class="fa-solid fa-cart-shopping"></i></Link>
-            <label>{cart.length}</label>
+            <label>{getNumberOfProducts()}</label>
           </div>
         </nav>
       </div>

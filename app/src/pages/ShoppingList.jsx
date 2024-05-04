@@ -23,7 +23,7 @@ function ShoppingList() {
   }
 
   return (
-    <div className="shopping-list">
+    <div className="shopping-list page">
       <h2>Shopping List</h2>
       <div className="form">
         <label>Add an item: </label>

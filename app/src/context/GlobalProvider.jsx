@@ -8,8 +8,19 @@ function GlobalProvider(props) {
   function addProduct(product) {
     console.log('Product added [global]');
     const copy = [...cart];
+    let exist = false;
 
-    copy.push(product);
+    for (let i = 0; i < copy.length; i++) {
+      if (copy[i]._id === product._id) {
+        copy[i].quantity += product.quantity;
+        exist = true;
+      }
+    }
+
+    if (!exist) {
+      copy.push(product);
+    }
+
     setCart(copy);
   }
 
@@ -18,7 +29,7 @@ function GlobalProvider(props) {
   }
 
   function clearCart() {
-    
+    setCart([]);
   }
 
   return (
