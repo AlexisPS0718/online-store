@@ -35,3 +35,10 @@
   padding: 1.5rem 3rem 1.5rem 3rem;
   margin-bottom: 1rem;
 }
+
+.coupon-form .coupons {
+  overflow-y: auto;
+  height: 95vh;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}

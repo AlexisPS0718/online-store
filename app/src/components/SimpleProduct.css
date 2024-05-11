@@ -1,0 +1,16 @@
+.simple-product {
+  display: flex;
+  align-items: center;
+  background-color: #F5F5F5;
+  border: 1px solid rgba(0, 0, 0, 0.192);
+  border-radius: 5px;
+  padding: 1.8rem;
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.simple-product img {
+  width: 25%;
+  height: 15%;
+  margin-right: 3rem;
+}

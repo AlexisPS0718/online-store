@@ -1,31 +1,38 @@
 # _FSDI 108: Introductory React_
+
 Online store project made with React.
 
 ## Frontend
 
 **Install create-react-app locally** \
-`` npm install -g create-react-app ``
+`npm install -g create-react-app`
 
 **Create a new React app** \
-`` npx create-react-app app ``
+`npx create-react-app app`
 
 **Install react-router-dom** \
-`` npx install -s react-router-dom ``
+`npx install -s react-router-dom`
+
+**Install Axios** \
+`npx install -s axios`
 
 **Start the frontend** \
-`` npm install `` \
-`` npm start ``
+`npm install` \
+`npm start`
 
 ## Backend
 
 **Enable virtual environment** \
-`` venv\Scripts\activate ``
+`venv\Scripts\activate`
 
 **Install Flask, Mongoose and PyMongo** \
-`` py -m pip install flask mongoose pymongo "pymongo[srv]" ``
+`py -m pip install flask mongoose pymongo "pymongo[srv]"`
 
 **Install Certifi** \
-`` py -m pip install certifi ``
+`py -m pip install certifi`
+
+**Install Flask CORS** \
+`py -m pip install flask-cors`
 
 **Start the backend** \
-`` flask --app server --debug run ``
+`flask --app server --debug run`

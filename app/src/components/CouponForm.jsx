@@ -1,5 +1,7 @@
 import './CouponForm.css'
-import { useState } from 'react';
+import dataService from '../services/dataService';
+import { useState, useEffect } from 'react';
+import SimpleCoupon from './SimpleCoupon';
 
 function CouponForm() {
   const [coupon, setCoupon] = useState({
@@ -8,12 +10,23 @@ function CouponForm() {
   });
   const [allCoupons, setAllCoupons] = useState([]);
 
+  useEffect(function () {
+    loadCoupons();
+  }, []);
+
+  async function loadCoupons() {
+    const coupons = await dataService.getCoupons();
+    setAllCoupons(coupons);
+  }
+
   function saveCoupon() {
     let copy = [...allCoupons];
 
     copy.push(coupon);
     setAllCoupons(copy);
-    
+
+    dataService.saveCoupon(coupon);
+
     console.log('Coupon saved', coupon);
   }
 
@@ -40,10 +53,8 @@ function CouponForm() {
         </div>
           <button onClick={saveCoupon}>Save coupon</button>
       </div>
-      <div className="list">
-        <ol>
-          {allCoupons.map(coupon => <li key={coupon.code}><b>Code:</b> {coupon.code} <br /><b>Discount:</b> {coupon.discount}%</li>)}
-        </ol>
+      <div className="coupons">
+        {allCoupons.map((coupon) => (<SimpleCoupon key={coupon._id} data={coupon} />))}
       </div>
     </div>
   );

@@ -1,10 +1,11 @@
 from flask import Flask, request, abort # type: ignore
-import json
-from config import db
+from flask_cors import CORS # type: ignore
 from bson import ObjectId # type: ignore
+from config import db
+import json
 
 app = Flask(__name__)
-products = []
+CORS(app) # Disables CORS protection
 
 @app.get("/")
 def home():

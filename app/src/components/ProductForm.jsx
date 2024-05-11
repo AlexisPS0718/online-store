@@ -1,5 +1,8 @@
+import dataService from '../services/dataService';
 import './ProductForm.css'
 import { useState } from 'react';
+import { useEffect } from 'react';
+import SimpleProduct from './SimpleProduct';
 
 function ProductForm() {
   const [product, setProduct] = useState({
@@ -10,13 +13,27 @@ function ProductForm() {
   });
   const [allProducts, setAllProducts] = useState([]);
 
+  useEffect(function () {
+    loadCatalog();
+  }, []);
+
+  async function loadCatalog() {
+    const prods = await dataService.getProducts();
+    setAllProducts(prods);
+  }
+
   function saveProduct() {
+    let fixedProduct = { ...product };
+    fixedProduct.price = parseFloat(fixedProduct.price);
+
     let copy = [...allProducts];
 
-    copy.push(product);
+    copy.push(fixedProduct);
     setAllProducts(copy);
-    
-    console.log('Product saved', product);
+
+    dataService.saveProduct(fixedProduct);
+
+    console.log("Product saved", fixedProduct);
   }
 
   function handleProduct(e) {
@@ -51,10 +68,8 @@ function ProductForm() {
         </div>
           <button onClick={saveProduct}>Save product</button>
       </div>
-      <div className="list">
-        <ol>
-          {allProducts.map(product => <li key={product.title}><b>Title:</b> {product.title} <br /><b>Price:</b> ${product.price} <br /><b>Image:</b> {product.image} <br /><b>Category:</b> {product.category}</li>)}
-        </ol>
+      <div className="products">
+        {allProducts.map((prod) => (<SimpleProduct key={prod._id} data={prod} />))}
       </div>
     </div>
   );
